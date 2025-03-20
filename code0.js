@@ -3,7 +3,6 @@ if (typeof Pi === "undefined") {
     script.src = "https://sdk.minepi.com/pi-sdk.js";
     document.head.appendChild(script);
 }
-
 async function authenticatePiUser() {
     try {
         const scopes = ["payments"]; // Permessi per i pagamenti
@@ -13,14 +12,12 @@ async function authenticatePiUser() {
         console.error("Errore nell'autenticazione:", error);
     }
 }
-
 function onIncompletePaymentFound(payment) {
     console.log("Pagamento incompleto trovato:", payment);
 }
 window.onload = function() {
     authenticatePiUser();
 };
-
 gdjs.introCode = {};
 gdjs.introCode.localVariables = [];
 gdjs.introCode.GDNewTiledSpriteObjects1= [];
